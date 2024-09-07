@@ -1,0 +1,215 @@
+
+.uno {
+
+  display: inline-block; 
+  position: relative;              /* Necesario para que la animación funcione */
+  left: 50px;                      /* Posición inicial a la izquierda */
+  margin-left: 100px;              /* Añade espacio a la izquierda */
+  color: #00ddff;                  /* Color del texto */
+  animation: moverDerecha 3s infinite alternate; /* Animación de movimiento */
+  box-shadow: 0 4px 8px rgba(3, 253, 245, 0.986); /* Sombra alrededor del div */
+  transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+  padding: 10px;                   /* Espacio interno alrededor del texto */
+  border-radius: 10px;   
+}
+
+.uno h2 {
+  text-shadow:#00ccff; /* Sombra para el texto */
+  margin: 0;                                   /* Ajusta el margen para que el texto esté alineado */
+}
+
+/* Definición de la animación para mover el div */
+@keyframes moverDerecha {
+  0% {
+    left: 5px;                    /* Posición inicial */
+  }
+  10% {
+    left: 15px;                   /* Mover 100px hacia la derecha */
+  }
+}
+
+/* Efecto hover opcional para aumentar la sombra cuando se pasa el ratón */
+.uno:hover {
+  box-shadow: 10px 8px 16px rgb(5, 193, 240); /* Incrementa la sombra al pasar el ratón */
+}
+
+
+/* Efecto hover opcional para aumentar la sombra cuando se pasa el ratón */
+.uno:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Incrementa la sombra al pasar el ratón */
+}
+
+
+
+.contenedor {
+  display: flex;           /* Usar Flexbox para alinear elementos horizontalmente */
+  align-items: center;     /* Centrar elementos verticalmente dentro del contenedor */
+  justify-content: center;
+  margin-top: 150px; /* Centrar elementos horizontalmente dentro del contenedor */
+}
+
+
+.nombre{
+  margin-left: 20px;  /* Separación entre el texto y la imagen */
+  color: aliceblue;
+
+}
+.imagen img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid #00ddff;
+  display: block;
+  margin-top: 15px;
+}
+.imagen {
+  text-align: center; /* Centrar el contenedor de la imagen */
+}
+.button_slide {
+  color: #300808;
+  border: 2px solid rgb(2, 226, 255);
+  border-radius: 0px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #00ddff;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+.slide_down:hover {
+  box-shadow: inset 0 100px 0 0 #00ddff;
+}
+#outer {
+  width: 364px;
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+.logo {
+  display: flex;             /* Usar Flexbox */
+  flex-direction: column;    /* Alinear elementos verticalmente */
+  align-items: center;       /* Centrar elementos dentro del contenedor */
+  position: fixed;           /* Fijar el contenedor a un lado de la pantalla */
+  top: 200px;                /* Mover el contenedor más abajo desde la parte superior */
+  left: 5px;                   /* Fijar el contenedor al lado izquierdo de la pantalla */
+  height: 20%;               /* Ajustar la altura del contenedor */
+  padding: 40px;             /* Espacio interno */
+}
+
+.logo .ima {
+  margin-bottom: 50px;         /* Espacio inferior entre cada imagen */
+  border: 3px solid rgb(0, 229, 255);     /* Borde blanco alrededor de cada imagen */
+  border-radius: 10px;         /* Espacio inferior entre cada imagen */
+}
+
+.logo .ima:last-child {
+  margin-bottom: 50px;          /* Eliminar el margen inferior del último elemento */
+}
+
+
+.jh{
+ margin-top: 15px;
+}
+h4 {
+  display: flex;               /* Usar Flexbox para alinear elementos en la misma línea */
+  align-items: center;         /* Alinear verticalmente los elementos al centro */
+}
+
+.con {
+  position: relative;          /* Posición relativa para contener elementos absolutos */
+  width: max-content;          /* Ajusta el ancho del contenedor al contenido */
+  display: flex;               /* Alinear en una fila dentro del contenedor */
+  margin-left: 10px;    
+  color:#00ccff;       /* Espacio entre "Y soy" y la animación */
+  height: 30px;               /* Ajusta la altura del contenedor para evitar saltos */
+}
+
+.animacion {
+  position: absolute;          /* Posiciona absolutamente cada palabra dentro del contenedor */
+  top: 0;
+  left: 0;
+  color:#00ccff;  
+  opacity: 0;                 /* Inicialmente invisibles */
+  animation: aparecer 9s infinite; /* Animación cíclica */
+  text-decoration: none; 
+}
+
+.animacion:nth-child(1) {
+  animation-delay: 0s;        /* Primer elemento sin retraso */
+}
+
+.animacion:nth-child(2) {
+  animation-delay: 3s;        /* Segundo elemento después de 3 segundos */
+}
+
+.animacion:nth-child(3) {
+  animation-delay: 6s;        /* Tercer elemento después de 6 segundos */
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;              /* Comienza invisible */
+  }
+  10% {
+    opacity: 1;              /* Aparece */
+  }
+  33.33% {
+    opacity: 1;              /* Mantiene visibilidad */
+  }
+  43.33% {
+    opacity: 0;              /* Desaparece */
+  }
+  100% {
+    opacity: 0;              /* Se mantiene invisible */
+  }
+}
+/* Estilos para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 768px) {
+  
+  .uno {
+    left: 0;                          /* Posición ajustada para pantallas más pequeñas */
+    margin-left: 20px;                 /* Reducir el margen en móviles */
+    font-size: 18px;                   /* Ajustar el tamaño del texto */
+    padding: 8px;                      /* Reducir el espacio interno */
+    box-shadow: 0 4px 8px rgba(3, 253, 245, 0.7); /* Sombra más suave en móviles */
+  }
+
+  .contenedor {
+    flex-direction: column;            /* Alinear los elementos verticalmente en lugar de horizontalmente */
+    margin-top: 80px;                  /* Reducir el margen superior */
+  }
+
+  .imagen img {
+    width: 200px;                      /* Reducir el tamaño de la imagen en móviles */
+    height: 200px;
+  }
+
+  .button_slide {
+    padding: 12px 24px;                /* Reducir el tamaño del botón */
+    font-size: 12px;                   /* Ajustar el tamaño de la fuente */
+  }
+
+  .logo {
+    top: 100px;                        /* Ajustar la posición de la barra lateral del logo */
+    left: 10px;                        /* Más espacio lateral en dispositivos pequeños */
+  }
+
+  .con {
+    flex-direction: column;            /* Hacer que el contenedor sea vertical en lugar de horizontal */
+    margin-left: 0px;                  /* Eliminar margen izquierdo */
+    align-items: center;               /* Centrar el texto */
+  }
+
+  h4 {
+    justify-content: center;           /* Centrar el texto en móviles */
+  }
+
+  .animacion {
+    font-size: 18px;                   /* Reducir el tamaño del texto de la animación */
+  }
+
+}
+
