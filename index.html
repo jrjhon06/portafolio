@@ -14,15 +14,14 @@
   body{
     background-color: rgb(0, 0, 0);
   
-  }
- </style>
+  }  </style>
    <!-- navbar.html -->
    <div id="menu"></div>
 
    <script>
      // Función para cargar el contenido de menu.html
      function loadMenu() {
-       fetch('menu.html')
+       fetch('men.html')
          .then(response => response.text()) // Convierte la respuesta a texto
          .then(data => {
            document.getElementById('men').innerHTML = data; // Inserta el HTML del menú en el div
