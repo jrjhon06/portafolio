@@ -1,0 +1,59 @@
+
+/* Estilo para el enlace de navegación principal */
+    .nav-link {
+      color: rgb(0, 200, 255) !important; /* Color del texto del enlace */
+      
+    }
+
+    /* Estilo para el contenedor del submenú */
+    .nav-item ul {
+      display: none; /* Ocultar submenú por defecto */
+      position: absolute; /* Posicionar submenú de forma absoluta */
+      background-color: #a12c2c; /* Fondo del submenú */
+      padding: 0; /* Eliminar padding del submenú */
+      margin: 0; /* Eliminar margin del submenú */
+      list-style: none; /* Eliminar viñetas del submenú */
+      border-radius: 10px;
+    }
+
+    /* Estilo para el submenú cuando el mouse pasa sobre el elemento principal */
+    .nav-item:hover ul {
+      display: block; /* Mostrar submenú al pasar el mouse */
+    }
+
+   
+
+    /* Estilo para los enlaces dentro del submenú */
+    .nav-item ul li a {
+      display: block; /* Hacer los enlaces bloques para que ocupen todo el ancho */
+      padding: 10px 15px; /* Añadir espacio alrededor de los enlaces */
+      color: #fff; /* Color del texto de los enlaces */
+      text-decoration: none; /* Eliminar subrayado del texto */
+    }
+
+    /* Estilo para los enlaces del submenú cuando el mouse pasa sobre ellos */
+    .nav-item ul li a:hover {
+      background-color: rgb(147, 212, 247); /* Cambiar el fondo al pasar el mouse */
+      color: #000000; /* Cambiar el color del texto al pasar el mouse */
+    }
+
+
+  
+ 
+  
+  /* Estilos para pantallas pequeñas (móviles) */
+  @media (max-width: 768px) {
+    .nav-item {
+      position: relative; /* Asegurarse de que el submenú esté relativo al elemento principal */
+    }
+  
+    .nav-item ul {
+      position: relative; /* Posicionar el submenú de forma relativa para móviles */
+      background-color: #333; /* Asegurar que el fondo sigue oscuro en móviles */
+    }
+  
+    .nav-item.show ul {
+      display: block; /* Mostrar el submenú cuando se toque el elemento principal */
+    }
+  }
+  
