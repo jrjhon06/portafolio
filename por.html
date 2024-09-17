@@ -1,281 +1,391 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portafolio Jhon Rony</title>
-
-    <!--CSS de Bootstrap 4.2.1-->
+    <link rel="stylesheet" href="css/folio.css">
+  
+    <title>mi portafolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
-    <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Oswald:300,500&display=swap" rel="stylesheet">
-
-    <!--Font Awesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/por.css">
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
 
+<link href="https://fonts.googleapis.com/css?family=Lobster|Oswald:300,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
 </head>
-
 <body>
+<style>
+    #menu {
+        position: fixed;
+        top: 0;
+        right: 1300px;
+        width: 200px;
+        height: 100%;
+        padding: 1px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      #menu .nav-item {
+        border: 1px solid #09efef;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        background-color: #1c1818;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      body {
+        background-color: #363333;
+        margin: 0;
+        padding-right: 0;
+      }
+      
+      .uno {
+        position: fixed;
+        right: 700px;
+        top: 10px;
+        color: #333;
+        animation: moverDerecha 3s infinite alternate;
+        box-shadow: 0 4px 8px rgba(57, 61, 61, 0.986);
+        transition: box-shadow 0.3s ease;
+        padding: 10px;
+        border-radius: 10px;
+        display: inline-block;
+        background-color: #f0f0f0;
+      }
+      
+      .uno a {
+        text-decoration: none;
+        color: #333;
+      }
+      
+      .uno h2 {
+        color: #1f1c1c;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        margin: 0;
+      }
+      
+      @keyframes moverDerecha {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(10px);
+        }
+      }
+      
+      .fondo {
+        top: 1px;
+        left: 0;
+        width: 95vw;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      
+      .imagen-ajustada {
+        height: 500px;
+        width: 2000px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      
+      .img-fluid.m-perfil {
+        border-radius: 50%;
+        object-fit: cover;
+        width: 350px;
+        height: 350px;
+        border: 5px solid #196d74;
+        margin-top: -60px;
+        margin-left: 40%;
+      }
+      
+      .letras {
+        text-align: center;
+        color: aliceblue;
+      }
+      
+      .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70px;
+        height: auto;
+      }
+      
+      .informacion {
+        display: flex;
+        justify-content: space-between;
+        color: aliceblue;
+        margin-top: 50px;
+      }
+      
+      .carrera-informacion,
+      .trabajos-informacion {
+        flex: 1;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      
+      .carrera-informacion p,
+      .trabajos-informacion p {
+        line-height: 1.4;
+        margin: 0;
+      }
+      
+      .carrera-informacion {
+        margin-left: 80px;
+        margin-right: auto;
+        text-align: left;
+      }
+      
+      .logos {
+        color: aliceblue;
+        text-align: center;
+      }
+      
+      .uni {
+        color: #f0f0f0;
+      }
+      
+      .contacto {
+        color: #f0f0f0;
+      }
+      
+      @media only screen and (max-width: 768px) {
+        #menu {
+          top: -10px;
+          right: 1px;
+          width: 100px;
+          height: 100%;
+          padding: 1px;
+        }
+      
+        #menu .nav-item {
+          border: 1px solid #09efef;
+          border-radius: 8px;
+          padding: 1px;
+        }
+      
+        .img-fluid.m-perfil {
+          margin-left: 20%;
+          width: 200px;
+          height: 200px;
+        }
+      
+        .letras h2 {
+          font-size: 10px;
+        }
+      
+        .letras h1 {
+          font-size: 15px;
+        }
+      
+        .letras h3 {
+          font-size: 15px;
+        }
+      
+        .uno {
+          right: 5px;
+          top: 5px;
+          padding: 10px;
+          position: relative;
+        }
+      
+        .imagen-ajustada {
+          height: 200px;
+          width: 100%;
+        }
+      
+        .informacion {
+          flex-direction: column;
+          font-size: 10px;
+        }
+      
+        .logos {
+          font-size: 1px;
+        }
+      
+        .uni {
+          color: #f0f0f0;
+        }
+      
+        .contacto {
+          color: #f0f0f0;
+          font-size: 13px;
+        }
+      }
+</style>
 
-        <nav class="navbar black navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html" width="137" height="46">Jhon Rony </a>
+         <div id="menu">
 
-            
+         <script>
+           // Función para cargar el contenido de menu.html
+           function loadMenu() {
+             fetch('menu.html')
+               .then(response => response.text()) // Convierte la respuesta a texto
+               .then(data => {
+                 document.getElementById('menu').innerHTML = data; // Inserta el HTML del menú en el div
+               })
+               .catch(error => console.error('Error al cargar el menú:', error)); // Maneja errores
+           }
+         
+           // Llama a la función para cargar el menú al cargar la página
+           loadMenu();
+         </script>
+        </div>
+ 
 
-               <!-- navbar.html -->
-   <div id="menu"></div>
+    <div class="uno">
+        <a href="index.html">JHON HUARSOCCA</a>
+          </div>
 
-   <script>
-     // Función para cargar el contenido de menu.html
-     function loadMenu() {
-       fetch('menu.html')
-         .then(response => response.text()) // Convierte la respuesta a texto
-         .then(data => {
-           document.getElementById('menu').innerHTML = data; // Inserta el HTML del menú en el div
-         })
-         .catch(error => console.error('Error al cargar el menú:', error)); // Maneja errores
-     }
-   
-     // Llama a la función para cargar el menú al cargar la página
-     loadMenu();
-   </script>
-
-          
-        </nav>
-    </header>
-    <section class="fondo mt-5 pt-3">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-">
-                    <img class="img-fluid" src="img/bg_hero.png" alt="imagen-fondo">
+        
+                    <img class="img-fluid imagen-ajustada" src="img/bg_hero.png" alt="imagen-fondo">
                 </div>
             </div>
         </div>
-    </section>
-    <section class="about">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col- text-center">
-                    <img class="img-fluid perfil" src="img/jhon.jpg" alt="imagen-fondo" data-toggle="tooltip"
-                        data-placement="top" title="jhon">
-                    <h1>Jhon Rony Huarsocca Huaynillos</h1>
-                    <hr style="color:white">
-                    <h2>programador front-end</h2>
-                    <a href="https://github.com/jrjhon06"><img class="logo" src="img/log.png"
-                            alt="adhesiboss"></a>
+        <img class="img-fluid m-perfil" src="img/jhon.jpg" alt="imagen-fondo" data-toggle="tooltip" data-placement="top" title="jhon">
 
-                    <div class="d-none d-sm-block my-5">
-                        <h3 class="my-5">Soy programador Profesional musico
-                            aficionado,
-                            <span class="badge badge-danger">ESCALADOR en PROGRESO</span>, Runner esporádico, Ciclista
-                            de corazón,
-                            Compañero de viaje...</h3>
-                        <hr class="segunda">
-                        <div class="row my-5">
-                            <div class="col-6 text-justify">
-                                <p><span>Estudios: </span><br>
-                                    Carrera desarrollo De Sistemas- UNITEK<br>
-                                    Carrera ing:Estadistica e Informatica - Universidad Nacional del altiplano<br>
-                                    curso front-end - Universidad nacional de san marcos<br>
-                                    curso de python y django - Instituto de software informatico<br>
-                                    curso creacion de aplicaciones - Instituto de software informatico<br>
-                                </p>
-                            </div>
-                            <div class="col-6 text-justify">
-                                <p>Cree <span>AdhesiBoss®</span> 
-                                    Decorativos. La idea nació como una nueva propuesta para reinventar las paredes
-                                    interiores o exteriores, desde entonces ya son más de 50 Diseños exclusivos que
-                                    conforman nuestro catálogo. Se trata de adhesivos que permiten transformar un
-                                    espacio en pocos minutos, creando atmósferas personales, originales, divertidas y
-                                    sofisticadas. Fruto del trabajo y esfuerzo del equipo de AdhesiBoss®, la empresa ya
-                                    cuenta con partners para encontrar nuestro trabajo.
-                                </p>
-                            </div>
-
-                        </div>
-                        <div class="justify-content-center">
-                            <h4 class="my-4 text-info"><span class="badge badge-danger">Skills :</span> <span
-                                    class="badge badge-pill badge-info">front-end</span> - <span
-                                    class="badge badge-pill badge-info">python</span> - <span
-                                    class="badge badge-pill badge-info">java</span> -
-                                <span class="badge badge-pill badge-info">adove XD</span> - <span
-                                    class="badge badge-pill badge-info">Figma</span> - <span
-                                    class="badge badge-pill badge-info">sql server</span> - <span
-                                    class="badge badge-pill badge-info">my sql</span> - <span
-                                    class="badge badge-pill badge-info">mariadb</span> </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="letras">
+           <h1>jhon huarsocca</h1>
+           <h3>programador <span class="badge rounded-pill text-bg-primary">front-end</span>
+           </h3>
         </div>
-    </section>
-    <section id="experience" class="experiencia">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-
-                <h2 class="titulo">ExperienciA</h2>
-
-                <div class="col">
-                    <div class="expe my-4 text-center">
-
-                        <img class=" img-fluid" src="img/una.jpg" alt="desafio">
-                        <h3>Carrera Ingerniero informatico</h3>
-                        <p>2022- Al Presente: <span class="badge badge-danger"> EN PROGRESO </span></p>
-                    </div>
-                    <div class="expe pega2 my-5 text-center">
-
-                        <img class="img-fluid" src="img/uni.jpg" width="130" height="130" alt="desafio">
-                        <h3>Carrera desarrollo de sistemas </h3>
-                        <p>Marzo 2021- agosto 2024: <span class="badge badge-danger"> COMPLETADO </span></p>
-
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="work" class="trabajos pb-5 mb-5 ">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2 class="oscuro">Últimos Trabajos...</h2>
-                    <div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="assets/img/meet_coffee.png" class="card-img-top" alt="meet_coffee">
-                            <div class="card-body">
-                                <h5 class="card-title">sistema de venta</h5>
-                                <p class="card-text">Aplicando todos los conceptos y herramientas aprendidas en la
-                                    sesión presencial Creando páginas web con HTML y CSS, vamos a añadir una segunda
-                                    página al proyecto Meet&coffee</p>
-                                <a href="https://adhesiboss.github.io/desafio1/"
-                                    class="btn btn-primary btn-block">visitar</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="assets/img/suricata.png" class="card-img-top" alt="suricata">
-                            <div class="card-body">
-                                <h5 class="card-title">Desafío - Suricata</h5>
-                                <p class="card-text">Aplicando todos los conceptos y herramientas aprendidas en los
-                                    videos sección Online Mejorando la experiencia y diseño de los sitios web con
-                                    Bootstrap, vamos a construir la página de "Suricata".</p>
-                                <a href="https://github.com/jrjhon06"
-                                    class="btn btn-primary btn-block">visitar</a>
-                            </div>
-                        </div>
-                    
-                        <div class="card" style="width: 18rem;">
-                            <img src="assets/img/ricomida.png" class="card-img-top" alt="meet_coffee">
-                            <div class="card-body">
-                                <h5 class="card-title">Desafío - Ricomida</h5>
-                                <p class="card-text">Aplicando todos los conceptos y herramientas aprendidas en la
-                                    sesión online, construiremos el sitio web de "Ricomida".</p>
-                                <a href="https://adhesiboss.github.io/desafio6/"
-                                    class="btn btn-primary btn-block">visitar</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="assets/img/dmark.png" class="card-img-top" alt="meet_coffee">
-                            <div class="card-body">
-                                <h5 class="card-title">AdhesiBoss web page</h5>
-                                <p class="card-text">Creacion pagina web de contacto para la realizacion de adhesivos.
-                                    Distintos formatos para adhesivos troquelados decorativos.</p>
-                                <a href="" class="btn btn-primary btn-block">visitar</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact" class="formulario">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <h2 class="contacto">ContactamE</h2>
-                    <p class="formu text-center">También recibimos quejas, felicitaciones y preguntas no muy complejas,
-                        puede
-                        que nos tome algo de tiempo responder pero nuestro laboratorio en ideas generales van a hacer lo
-                        mejor posible. Tomate un tiempo y detállanos tu solicitud, así todos ganamos tiempo ;</p>   
-                        <div class=" d-none d-sm-block d-md-block d-lg-block d-xl-block typeform-widget"
-                            data-url="https://raulruiz713788.typeform.com/to/Gn4ncT" style="width: 100%; height: 500px;">
-                        </div>
-                        
-                    </div>
-                    <script>
-                        (function () {
-                            var qs, js, q, s, d = document,
-                        gi = d.getElementById,
-                        ce = d.createElement,
-                        gt = d.getElementsByTagName,
-                        id = "typef_orm",
-                        b = "https://embed.typeform.com/";
-                    if (!gi.call(d, id)) {
-                        js = ce.call(d, "script");
-                        js.id = id;
-                        js.src = b + "embed.js";
-                        q = gt.call(d, "script")[0];
-                        q.parentNode.insertBefore(js, q)
-                    }
-                })()
-            </script>
-
-            <div class="d-none d-sm-block d-md-block d-lg-block d-xl-block"
-                style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;">
-                powered by <a
-                    href="https://admin.typeform.com/signup?utm_campaign=Gn4ncT&utm_source=typeform.com-14660379-Free&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=ES"
-                    style="color: #999" target="_blank">Typeform</a> </div>
-
-
-            <a class="typeform-share button " href="https://raulruiz713788.typeform.com/to/Gn4ncT"
-                data-mode="popup"
-                style="display:inline-block;text-decoration:none;background-color:#000000;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;"
-                target="_blank">¡contactame! </a>
-            <script>
-                (function () {
-                    var qs, js, q, s, d = document,
-                        gi = d.getElementById,
-                        ce = d.createElement,
-                        gt = d.getElementsByTagName,
-                        id = "typef_orm_share",
-                        b = "https://embed.typeform.com/";
-                    if (!gi.call(d, id)) {
-                        js = ce.call(d, "script");
-                        js.id = id;
-                        js.src = b + "embed.js";
-                        q = gt.call(d, "script")[0];
-                        q.parentNode.insertBefore(js, q)
-                    }
-                })()
-            </script>
-
-        </div>
-    </div>
+        <div class="contenedor-logo">
+            <img src="img/log.png" class="logo" alt="Descripción de la imagen">
+          </div>
+          <div class="letras">
+           <h2>Soy programador Profesional musico aficionado,<span class="badge rounded-pill text-bg-danger">ESCALADOR en PROGRESO</span>, 
+           </h2><h2>Runner esporádico, Ciclista de corazón, Compañero de viaje...
+        </h2>
+          </div>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+          <div class="informacion">
+            <div class="carrera-informacion">
+        
+             <h3>ESTUDIOS:</h3>
+<p>Carrera desarrollo De Sistemas- UNITEK</p>
+<p>Carrera ing:Estadistica e Informatica - Universidad Nacional del altiplano</p>
+<p>Curso front-end - Universidad nacional de san marcos</p>
+<p>Curso de python y django - Instituto de software informatico</p>
+<p>Curso creacion de aplicaciones - Instituto de software informatico</p>
 </div>
-</section>
 
-<footer class="text-center text-white justify-content-center ">
-<p>..Jhon Rony
+<div class="trabajos-informacion">
+    <h3>EXPERIENCIA:</h3>
+<p>Cree AdhesiBoss® Decorativos. La idea nació como una nueva propuesta para</p>
+<p>reinventar las paredes interiores o exteriores, desde entonces ya son más de</p>
+<p>50 Diseños exclusivos que conforman nuestro catálogo. Se trata de adhesivos</p>
+<p>que permiten transformar un espacio en pocos minutos, creando atmósferas</p>
+<p>personales, originales, divertidas y sofisticadas. Fruto del trabajo y esfuerzo del</p>
+<p>equipo de AdhesiBoss®, la empresa ya cuenta con partners para encontrar</p>
+<p>nuestro trabajo.</p>
+</div>
+          </div>
+          <div class="logos">
+<h3><span class="badge rounded-pill text-bg-danger">Skills:</span>  <span class="badge rounded-pill text-bg-primary">front-end</span> - <span class="badge rounded-pill text-bg-primary">python</span> - 
+    <span class="badge rounded-pill text-bg-primary">java</span> - <span class="badge rounded-pill text-bg-primary">adove XD</span> - <span class="badge rounded-pill text-bg-primary">Figma</span> - <span class="badge rounded-pill text-bg-primary">sql server</span>
+    - <span class="badge rounded-pill text-bg-primary">mysql</span> - <span class="badge rounded-pill text-bg-primary">mariadb</span></h3>
+</div>
+<div class="uni">
+<center>
+<img src="img/una.jpg">
+<h2>Carrera Ingerniero informatico</h2>
+<p>2022-al presente:<span class="badge rounded-pill text-bg-danger">EN PROGRESO</span> </p>
+<img src="img/uni.jpg">
+<h2>Carrera desarrollo de sistemas</h2>
+<p>2022-al presente: <span class="badge rounded-pill text-bg-danger">COMPLETADO</span></p>
+</center>
+</div>
+<center><h1 style="color:#f0f0f0">ultimos trabajos</h1></center>
+
+<div class="informacion">
+    <div class="carrera-informacion" style="background-image: url('img.jpg'); background-size: cover; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+      <p>meet_coffee</p>
+      <h3>sistema de venta</h3>
+      <p>Aplicando todos los conceptos y herramientas aprendidas en la sesión presencial Creando páginas web con HTML y CSS, vamos a añadir una segunda página al proyecto Meet&coffee</p>
+      <button style="background-color: #4caf99; color: #fff; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer;">visitar</button>
+    </div>
+  
+    <div class="carrera-informacion" style="background-image: url('image2.jpg'); background-size: cover; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+      <h3>desafio-suricata</h3>
+      <p>Aplicando todos los conceptos y herramientas aprendidas en la sesión presencial Creando páginas web con HTML y CSS, vamos a añadir una segunda página al proyecto Meet&coffee</p>
+      <button style="background-color: #4caf99; color: #fff; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer;">visitar</button>
+    </div>
+  
+    <div class="trabajos-informacion" style="background-image: url('image3.jpg'); background-size: cover; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+      <h3>Desafío - Ricomida</h3>
+      <p>Aplicando todos los conceptos y herramientas aprendidas en la sesión online, construiremos el sitio web de "Ricomida".</p>
+      <button style="background-color: #4caf99; color: #fff; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer;">visitar</button>
+    </div>
+  
+    <div class="trabajos-informacion" style="background-image: url('image4.jpg'); background-size: cover; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+      <h3>AdhesiBoss web page</h3>
+      <p>Creacion pagina web de contacto para la realizacion de adhesivos. Distintos formatos para adhesivos troquelados decorativos.</p>
+      <button style="background-color: #4caf99; color: #fff; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer;">visitar</button>
+    </div>
+  </div>
+
+
+<div class="contacto">
+<center><h1>contactame</h1>
+<p>También recibimos quejas, felicitaciones y preguntas no muy complejas, puede que nos tome algo de tiempo responder,</p>
+<p> pero nuestro laboratorio en ideas generales van a hacer lo mejor posible.</p>
+<p>Tomate un tiempo y detállanos tu solicitud, así todos ganamos tiempo ;</p></center>
+</div>
+
+<div class=" d-none d-sm-block d-md-block d-lg-block d-xl-block typeform-widget"
+data-url="https://raulruiz713788.typeform.com/to/Gn4ncT" style="width: 100%; height: 500px;">
+</div>
+
+<div class="d-none d-sm-block d-md-block d-lg-block d-xl-block"
+style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;">
+powered by <a
+    href="https://admin.typeform.com/signup?utm_campaign=Gn4ncT&utm_source=typeform.com-14660379-Free&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=ES"
+    style="color: #999" target="_blank">Typeform</a> </div>
+
+    <center>
+<a class="typeform-share button " href="https://raulruiz713788.typeform.com/to/Gn4ncT"
+data-mode="popup"
+style="display:inline-block;text-decoration:none;background-color:#d6d0d0;color:rgb(13, 13, 13);cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;"
+target="_blank" >¡contactame! </a>
+    </center>
+<script>(function () {
+    var qs, js, q, s, d = document,
+        gi = d.getElementById,
+        ce = d.createElement,
+        gt = d.getElementsByTagName,
+        id = "typef_orm_share",
+        b = "https://embed.typeform.com/";
+    if (!gi.call(d, id)) {
+        js = ce.call(d, "script");
+        js.id = id;
+        js.src = b + "embed.js";
+        q = gt.call(d, "script")[0];
+        q.parentNode.insertBefore(js, q)
+    }
+})()
+</script>
+
+<p style="color:#f0f0f0">..Jhon Rony
     <a href="https://github.com/jrjhon06" target="_blank"><i class="fab fa-github fa-2x"></i></a>
 </p>
 
-</footer>
-
-
-<!--jQuery 3.3.1 sin slim-->
-
-<!--Mi script-->
-<script src="script.js"></script>
 </body>
-
 </html>
