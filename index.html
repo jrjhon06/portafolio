@@ -72,25 +72,8 @@
 </div>
 <!-- Botón para abrir el archivo PDF -->
 <div id="outer">
-    <button class="button_slide slide_down"id="abrir-pdf">Descargar cv</button>
+   <a href="https://drive.google.com/file/d/17_mZW7GwPLlri-CIdgvogJFgtOCS3jhi/view"> <button class="button_slide slide_down"id="abrir-pdf">Visualizar cv</button></a>
 
-  
-  <script>
-  // Variable para rastrear si la pestaña está abierta
-  let fichaTecnicaAbierta = false;
-  let fichaTecnicaVentana;
-  
-  document.getElementById('abrir-pdf').addEventListener('click', function() {
-      if (!fichaTecnicaAbierta) {
-          // Si la pestaña no está abierta, abre el archivo PDF en una nueva pestaña
-          fichaTecnicaVentana = window.open('venta/cv12.docx', '_blank');
-          fichaTecnicaAbierta = true;
-      } else {
-          // Si la pestaña ya está abierta, enfoca la pestaña existente
-          fichaTecnicaVentana.focus();
-      }
-  });
-  </script>
 </div>
   <script src="js/men.js"></script>
 </body>
